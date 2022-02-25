@@ -28,3 +28,20 @@ arrayElement.forEach(x => {
 arrayElement.forEach(item => {
     lista.innerHTML += `<li>${item}</li>`;
 })
+const listados = document.getElementById('listados');
+const arrayElements = ['item 1', 'item 2', 'item 3']
+const fragment = document.createDocumentFragment()
+arrayElements.forEach(item => {
+
+    const li = document.createElement('li')
+    li.textContent = item
+        //fragment.appendChild(li);
+
+    const childNode = fragment.firstChild
+
+
+
+    fragment.insertBefore(li, childNode);
+})
+
+listados.appendChild(fragment)
