@@ -10,3 +10,21 @@ const parrafo = document.querySelector("#parrafo");
 parrafo.textContent = 'texto desde js';
 //parrafo.innerHTML = '<b>texto desde vanilla</b>';
 parrafo.classList.add('h3-danger', 'my-2');
+
+//------------------
+
+const lista = document.getElementById('lista');
+const arrayElement = ['primer Elemento', 'segundo', 'tercero']
+
+arrayElement.forEach(x => console.log(x));
+arrayElement.forEach(x => {
+
+        const li = document.createElement('li')
+        li.textContent = x
+        lista.appendChild(li)
+    })
+    //
+
+arrayElement.forEach(item => {
+    lista.innerHTML += `<li>${item}</li>`;
+})
